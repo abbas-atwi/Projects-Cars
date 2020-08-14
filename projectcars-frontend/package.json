@@ -1,5 +1,10 @@
 {
-  "name": "projectcars-frontend",
+  "author": {
+    "name": "Jonas Farias Peretiatko",
+    "email": "jonasdefarias@hotmail.com",
+    "url": "https://github.com/abbas-atwi/Projects-Cars"
+  },
+  "name": "project-cars",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -10,6 +15,7 @@
     "@types/node": "^12.12.54",
     "@types/react": "^16.9.46",
     "@types/react-dom": "^16.9.8",
+    "moment": "lasted",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.3",
@@ -19,10 +25,26 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint:fix": "lint-staged"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended"
+    ],
+    "parser": "babel-eslint",
+    "parserOptions": {
+      "ecmaFeatures": {
+        "modules": true,
+        "jsx": true
+      }
+    },
+    "settings": {
+      "react": {
+        "version": "16.13"
+      }
+    }
   },
   "browserslist": {
     "production": [
@@ -35,5 +57,19 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint-plugin-react": "^7.20.6",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint:fix"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx,js,jsx}": "eslint --fix"
   }
 }
