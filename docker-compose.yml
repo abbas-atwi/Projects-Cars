@@ -9,6 +9,16 @@ services:
         ports:
             - "3000:3000"
         container_name: projectcars-frontend
+    projectcars-db:
+        image: "mysql:8"
+        container_name: projectcars-db
+        environment: 
+            MYSQL_ROOT_PASSWORD: hackme
+            MYSQL_DATABASE: "projectcars"
+        volumes: 
+            - "./dbdata:/var/lib/mysql"
+        restart: always
+
 networks: 
     default:
         external: 
