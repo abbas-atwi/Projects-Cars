@@ -5,6 +5,7 @@ services:
         build: ./projectcars-frontend
         volumes: 
             - "./projectcars-frontend:/app"
+        tty: true
         ports:
             - "3000:3000"
         container_name: projectcars-frontend
