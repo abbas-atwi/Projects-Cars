@@ -1,0 +1,14 @@
+version: "2.0"
+
+services: 
+    projectcars-frontend: 
+        build: ./projectcars-frontend
+        volumes: 
+            - "./projectcars-frontend:/app"
+        ports:
+            - "3000:3000"
+        container_name: projectcars-frontend
+networks: 
+    default:
+        external: 
+            name: projectcars
