@@ -1,15 +1,15 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/node_modules
+projectcars-frontend/node_modules
 /.pnp
 .pnp.js
 
 # testing
-/coverage
+projectcars-frontend/coverage
 
 # production
-/build
+projectcars-frontend/build
 
 # misc
 .DS_Store
@@ -18,9 +18,9 @@
 .env.test.local
 .env.production.local
 
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+projectcars-frontend/npm-debug.log*
+projectcars-frontend/yarn-debug.log*
+projectcars-frontend/yarn-error.log*
 
 dbdata/
 !dbdata/.donotdelete
