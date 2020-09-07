@@ -27,7 +27,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint:fix": "lint-staged"
+    "lint:fix": "lint-staged",
+    "node-sass": "node-sass --watch --recursive --output src/style/css src/style/scss"
   },
   "eslintConfig": {
     "extends": [
